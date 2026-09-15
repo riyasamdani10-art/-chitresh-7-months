@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>7 Months ♡</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(145deg,#f9e8e5,#efd2d0);color:#4d3034;font-family:Georgia,serif}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px}
+.card{width:min(100%,520px);background:#fff9f5;border-radius:28px;box-shadow:0 20px 60px #6d404025;padding:28px 22px;text-align:center}
+.kicker{font:600 12px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#a76b70;margin-bottom:18px}
+.envelope{position:relative;width:100%;height:270px;margin:5px auto 25px;cursor:pointer}
+.env{position:absolute;inset:20px 0 0;background:#d88f96;border-radius:12px;box-shadow:0 15px 30px #7b414120}
+.env:before{content:"";position:absolute;left:0;right:0;top:0;height:145px;background:#e5a4a8;clip-path:polygon(0 0,50% 62%,100% 0,100% 16%,50% 76%,0 16%);z-index:3}
+.paper{position:absolute;z-index:2;background:#fffdf9;left:7%;right:7%;top:34px;height:185px;border-radius:8px;padding:25px 18px;font-size:15px;line-height:1.55;box-shadow:0 6px 18px #5b303015;transition:.8s}
+.seal{position:absolute;z-index:5;left:50%;top:122px;transform:translate(-50%,-50%);width:62px;height:62px;border-radius:50%;background:#a94e61;color:white;display:grid;place-items:center;font-size:28px;border:5px solid #f2c5c5;box-shadow:0 5px 15px #6d263340;transition:.4s}
+.open .paper{transform:translateY(-120px);height:270px;z-index:6}
+.open .seal{opacity:0;transform:translate(-50%,-50%) scale(.5)}
+.open .env:before{transform:rotateX(180deg);transform-origin:top;transition:.7s}
+.open .env{z-index:4}
+button{border:0;width:100%;padding:19px 22px;border-radius:999px;background:linear-gradient(135deg,#d65f78,#b94e69);color:white;font:700 17px Arial,sans-serif;letter-spacing:.3px;box-shadow:0 10px 25px #a9435b35;cursor:pointer}
+button:active{transform:scale(.98)}
+.hint{font:12px Arial,sans-serif;color:#a27679;margin-top:11px}
+.letter{display:none;text-align:left;margin-top:25px;padding:24px 20px;background:#fffdf9;border:1px solid #efd9d5;border-radius:18px;line-height:1.7;font-size:16px}
+.open+.letterWrap .letter{display:block}
+.letter h1{text-align:center;font-size:26px;font-weight:normal;color:#9c5660;margin:0 0 22px}
+.letter p{margin:0 0 15px}.sign{text-align:center;font-size:18px;margin-top:25px}
+@media(max-width:380px){.envelope{height:235px}.paper{height:160px}.open .paper{height:250px}.letter{font-size:15px}}
+</style>
+</head>
+<body>
+<div class="page"><div class="card">
+<div class="kicker">A little something for my favourite person ♡</div>
+<div class="envelope" id="env">
+<div class="env"></div>
+<div class="paper">For my favourite person...<br><br><b>7 months & 700 reasons ♡</b></div>
+<div class="seal">♥</div>
+</div>
+<button id="openBtn">OPEN MY LETTER 💌</button>
+<div class="hint">tap the button to open your surprise</div>
+<div class="letterWrap"><article class="letter">
+<h1>7 months and 700 reasons ♡</h1>
+<p><b>Dear Chit-resh / chikli Pikli / CHITRU / CHITRI / Bestfriend,</b></p>
+<p>7 months and 700 reasons to love you.</p>
+<p>I keep adoring you more and more with each passing month, you’re my bestfffff, my go-to person, my crisis solver, my favourite place to be at any time of the day.</p>
+<p>Your arms give me warmth and your eyes remind me of the sincerity in your love and promises.</p>
+<p>I prayed for a love that felt like a glass of cold iced tea on a scorching summer afternoon and like a warm steaming cup of <i>kadak adrak chai</i> on a rainy day.</p>
+<p>And loving you has exactly felt the same, something that rejuvenated my soul after years of yearning and calmed my heart but has also made me feel like I am cornered in a safe and comforting space.</p>
+<p>You’re the drunken bookie to my pickled mango ching lung beer,<br>
+You’re the MTR podi dose to my SPICED MINT BUTTERMILK,<br>
+You’re the cigarette to my post karaoke sesh at local,<br>
+You’re the scrambled eggs to my oats protein shake,<br>
+You’re tres leches to my 2am dessert craving,<br>
+You’re the salt to my minty jamun.</p>
+<p>You complement me so well.<br>(I hope you get the references 😭😂😾)</p>
+<p>I love sharing this little life with you.</p>
+<p>Thank you for bearing me, hearing me, caring for me, and moreover loving me so much.</p>
+<p>Here’s to so many more adventures that await us.</p>
+<p><b>Chitresh Choudhary, I love you 💗🫂✨🫶🍻</b></p>
+<p class="sign">Cheers to making it to 7 🫶😾</p>
+</article></div>
+</div></div>
+<script>
+const btn=document.getElementById('openBtn'), env=document.getElementById('env');
+btn.addEventListener('click',()=>{env.classList.add('open');btn.textContent='LETTER OPENED 💗';btn.disabled=true;document.querySelector('.letter').scrollIntoView({behavior:'smooth',block:'start'})});
+</script>
+</body>
+</html>
